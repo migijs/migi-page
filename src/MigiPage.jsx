@@ -67,12 +67,10 @@ class Page extends migi.Component {
   }
   click(e) {
     e.preventDefault();
-    if(e.target.nodeName == 'A') {
-      var index = e.target.innerHTML;
-      if(index && index != this.index) {
-        this.index = parseInt(index);
-        this.emit('page', this.index);
-      }
+    var index = e.target.innerHTML;
+    if(index && index != this.index) {
+      this.index = parseInt(index);
+      this.emit('page', this.index);
     }
   }
   prev(e) {
@@ -93,7 +91,7 @@ class Page extends migi.Component {
   render() {
     return <form class="page" onSubmit={ this.submit } onSwipeLeft={ this.prev } onSwipeRight={ this.next }>
       <a href="#" class={ this.index == 1 ? 'prev dis' : 'prev' } onClick={ this.prev }><b></b>上一页</a>
-      <ol onClick={ this.click }>
+      <ol onClick={ { 'a': this.click } }>
         {
           this.list
         }

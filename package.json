@@ -25,7 +25,7 @@
   "dependencies": {
   },
   "devDependencies": {
-    "migi": "~0.10.3",
+    "migi": "~0.10.4",
     "es5-shim": "*",
     "es6-shim": "~0.32.0",
     "migi-loader": "~0.10.0",
@@ -38,7 +38,7 @@
   "spm": {
     "main": "./src/MigiPage.jsx",
     "devDependencies": {
-      "migi": "~0.10.3",
+      "migi": "~0.10.4",
       "es5-shim": "*",
       "es6-shim": "~0.32.0"
     },
