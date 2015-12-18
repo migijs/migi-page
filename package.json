@@ -1,0 +1,58 @@
+{
+  "name": "migi-city",
+  "version": "0.1.0",
+  "description": "A city WebComponent of migi",
+  "maintainers": [
+    {
+      "name": "army8735",
+      "email": "army8735@qq.com"
+    }
+  ],
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/migijs/migi-city.git"
+  },
+  "keywords": [
+    "migi",
+    "city",
+    "WebComponent"
+  ],
+  "author": "army8735",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "migi": "~0.10.3",
+    "es5-shim": "*",
+    "es6-shim": "~0.32.0",
+    "migi-loader": "~0.10.0",
+    "jaw-loader": "~0.10.0"
+  },
+  "main": "./index",
+  "engines": {
+    "node": ">= 4.2"
+  },
+  "spm": {
+    "main": "./src/MigiPage.jsx",
+    "devDependencies": {
+      "migi": "~0.10.3",
+      "es5-shim": "*",
+      "es6-shim": "~0.32.0"
+    },
+    "output": [
+      "./src/MigiPage.jsx",
+      "./demo/index.jsx"
+    ],
+    "build": {
+      "autoprefixer": true,
+      "loader": {
+        ".jsx": "migi-loader?es5=true&lie=true",
+        ".cssx": "jaw-loader"
+      }
+    }
+  },
+  "readmeFilename": "README.md"
+}
